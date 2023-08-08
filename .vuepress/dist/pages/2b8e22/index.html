@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>批量操作front matter工具</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.d2efa666.css" as="style"><link rel="preload" href="/assets/js/app.ed753c8f.js" as="script"><link rel="preload" href="/assets/js/2.487b4d99.js" as="script"><link rel="preload" href="/assets/js/18.bb4fd5c5.js" as="script"><link rel="prefetch" href="/assets/js/10.2009b1f8.js"><link rel="prefetch" href="/assets/js/11.adc4ee82.js"><link rel="prefetch" href="/assets/js/12.ed0d8892.js"><link rel="prefetch" href="/assets/js/13.4f50172f.js"><link rel="prefetch" href="/assets/js/14.bbe308c2.js"><link rel="prefetch" href="/assets/js/15.911c872d.js"><link rel="prefetch" href="/assets/js/16.8424010b.js"><link rel="prefetch" href="/assets/js/17.97c545fb.js"><link rel="prefetch" href="/assets/js/19.4afcf09d.js"><link rel="prefetch" href="/assets/js/20.23c577ed.js"><link rel="prefetch" href="/assets/js/21.3a450fc0.js"><link rel="prefetch" href="/assets/js/22.1032ae3e.js"><link rel="prefetch" href="/assets/js/23.79f8deb6.js"><link rel="prefetch" href="/assets/js/24.05e20989.js"><link rel="prefetch" href="/assets/js/25.02762973.js"><link rel="prefetch" href="/assets/js/26.25df0425.js"><link rel="prefetch" href="/assets/js/27.649dfd59.js"><link rel="prefetch" href="/assets/js/28.5463d42e.js"><link rel="prefetch" href="/assets/js/29.5a4d59b6.js"><link rel="prefetch" href="/assets/js/3.60390195.js"><link rel="prefetch" href="/assets/js/30.e687ba1f.js"><link rel="prefetch" href="/assets/js/31.9240feab.js"><link rel="prefetch" href="/assets/js/32.5e891002.js"><link rel="prefetch" href="/assets/js/33.ae495beb.js"><link rel="prefetch" href="/assets/js/34.803f5a44.js"><link rel="prefetch" href="/assets/js/35.c35bf7ef.js"><link rel="prefetch" href="/assets/js/4.8b3a8467.js"><link rel="prefetch" href="/assets/js/5.954ec756.js"><link rel="prefetch" href="/assets/js/6.a07c6449.js"><link rel="prefetch" href="/assets/js/7.91a26545.js"><link rel="prefetch" href="/assets/js/8.8bb2981e.js"><link rel="prefetch" href="/assets/js/9.4236f623.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d2efa666.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>当你想为某个文件夹下的所有<code>.md</code>文件添加、修改、删除某些front matter字段时，这个工具可以快速的为你批量操作。</p> <p>首先，你需要在<code>package.json</code>的<code>scripts</code>中写入脚本：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// package.json</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+       <span class="token property">&quot;editFm&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node utils/editFrontmatter.js&quot;</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在<code>utils/config.yml</code>配置要批量操作的文件夹和要编辑的字段，示例：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># utils/config.yml</span>
+<span class="token comment">#批量添加和修改、删除front matter配置文件</span>
+
+<span class="token comment"># 需要批量处理的路径，docs文件夹内的文件夹 (数组。映射路径：docs/arr[1]/arr[2] ... )</span>
+<span class="token key atrule">path</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> docs <span class="token comment"># 第一个成员必须是docs</span>
+  <span class="token punctuation">-</span> 《JS教程》专辑
+  <span class="token punctuation">-</span> 第一章节
+
+<span class="token comment"># 要删除的字段 (数组)</span>
+<span class="token key atrule">delete</span><span class="token punctuation">:</span>  
+  <span class="token punctuation">-</span> article
+
+ <span class="token comment"># 要添加、修改front matter的数据 （front matter中没有的数据则添加，已有的数据则覆盖）</span>
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">author</span><span class="token punctuation">:</span> 齐天大圣
+  <span class="token key atrule">sidebar</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre></div><p>比如你要操作的文件夹路径是<code>docs/《JS教程》专辑/第一章节</code>，你需要这样配置路径：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">path</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> docs <span class="token comment"># 第一个成员必须是docs</span>
+  <span class="token punctuation">-</span> 《JS教程》专辑
+  <span class="token punctuation">-</span> 第一章节
+</code></pre></div><p><code>path</code>数组的第一个成员必须是<code>docs</code>，如果你想操作<code>docs</code>底下除了首页之外所有的<code>.md</code>文件，只需保留第一个成员<code>docs</code>即可。</p> <p>你想删除<code>article</code>字段：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">delete</span><span class="token punctuation">:</span>  
+  <span class="token punctuation">-</span> article
+</code></pre></div><p>你想为这个文件夹下的所有<code>.md</code>文件添加作者<code>author</code>和隐藏侧边栏<code>sidebar</code>：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">author</span><span class="token punctuation">:</span> 齐天大圣
+  <span class="token key atrule">sidebar</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre></div><p>最后，执行<code>npm run editFm</code>命令，为了防止误操作，会有一个询问过程：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> run editFm
+? 批量操作frontmatter有修改数据的风险，确定要继续吗？ <span class="token punctuation">(</span>Y/n<span class="token punctuation">)</span> 
+<span class="token punctuation">..</span>.
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ed753c8f.js" defer></script><script src="/assets/js/2.487b4d99.js" defer></script><script src="/assets/js/18.bb4fd5c5.js" defer></script>
+  </body>
+</html>

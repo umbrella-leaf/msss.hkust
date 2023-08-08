@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于写文章和一级标题</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.d2efa666.css" as="style"><link rel="preload" href="/assets/js/app.ed753c8f.js" as="script"><link rel="preload" href="/assets/js/2.487b4d99.js" as="script"><link rel="preload" href="/assets/js/20.23c577ed.js" as="script"><link rel="prefetch" href="/assets/js/10.2009b1f8.js"><link rel="prefetch" href="/assets/js/11.adc4ee82.js"><link rel="prefetch" href="/assets/js/12.ed0d8892.js"><link rel="prefetch" href="/assets/js/13.4f50172f.js"><link rel="prefetch" href="/assets/js/14.bbe308c2.js"><link rel="prefetch" href="/assets/js/15.911c872d.js"><link rel="prefetch" href="/assets/js/16.8424010b.js"><link rel="prefetch" href="/assets/js/17.97c545fb.js"><link rel="prefetch" href="/assets/js/18.bb4fd5c5.js"><link rel="prefetch" href="/assets/js/19.4afcf09d.js"><link rel="prefetch" href="/assets/js/21.3a450fc0.js"><link rel="prefetch" href="/assets/js/22.1032ae3e.js"><link rel="prefetch" href="/assets/js/23.79f8deb6.js"><link rel="prefetch" href="/assets/js/24.05e20989.js"><link rel="prefetch" href="/assets/js/25.02762973.js"><link rel="prefetch" href="/assets/js/26.25df0425.js"><link rel="prefetch" href="/assets/js/27.649dfd59.js"><link rel="prefetch" href="/assets/js/28.5463d42e.js"><link rel="prefetch" href="/assets/js/29.5a4d59b6.js"><link rel="prefetch" href="/assets/js/3.60390195.js"><link rel="prefetch" href="/assets/js/30.e687ba1f.js"><link rel="prefetch" href="/assets/js/31.9240feab.js"><link rel="prefetch" href="/assets/js/32.5e891002.js"><link rel="prefetch" href="/assets/js/33.ae495beb.js"><link rel="prefetch" href="/assets/js/34.803f5a44.js"><link rel="prefetch" href="/assets/js/35.c35bf7ef.js"><link rel="prefetch" href="/assets/js/4.8b3a8467.js"><link rel="prefetch" href="/assets/js/5.954ec756.js"><link rel="prefetch" href="/assets/js/6.a07c6449.js"><link rel="prefetch" href="/assets/js/7.91a26545.js"><link rel="prefetch" href="/assets/js/8.8bb2981e.js"><link rel="prefetch" href="/assets/js/9.4236f623.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d2efa666.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>写文章时，大概的流程是这样的：</p> <p>1.首先是创建<code>.md</code>文件，如果在结构化目录下则<strong>需要</strong>添加相应的序号，在碎片化博文目录<code>_posts</code>下<strong>不需要</strong>添加序号，文件名填写文章的标题。</p> <p>2.如果你想手动指定文章的分类、标签，则需要在头部front matter填写相应的字段。一般情况下不需要再填写其他字段。不想手动指定分类和标签也可以省略这一步。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> 
+  <span class="token punctuation">-</span> 分类1
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> 
+  <span class="token punctuation">-</span> 标签1
+  <span class="token punctuation">-</span> 标签2
+<span class="token punctuation">---</span>
+</code></pre></div><p>3.<strong>关于一级标题</strong>，即markdown中的一级标题(<code># 标题</code>)，你可以写也可以不写，在页面中实际显示的文章标题是取自front matter中的<code>title</code>，然后把<code>.md</code>中的一级标题隐藏了。</p> <blockquote><p>这样做即可以保留本地文件的一级标题，也可以兼容线上页面的标题。
+同时，对于在新建<code>.md</code>文件时已经输入了一次标题在文件名，不想在文档中重复输入一次标题的，也是可以实现的。</p></blockquote> <p>4.<strong>关于文章摘要</strong>，你想在首先文章列表中显示摘要时可以在合适的位置添加一个<code>&lt;!-- more --&gt;</code>注释，参考：<a href="/pages/1cc523/">添加摘要</a></p> <p>5.最后，就可以正式开始写作啦。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ed753c8f.js" defer></script><script src="/assets/js/2.487b4d99.js" defer></script><script src="/assets/js/20.23c577ed.js" defer></script>
+  </body>
+</html>
