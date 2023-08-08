@@ -20,7 +20,7 @@ module.exports = {
   // 主题配置
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
+      { text: ' 首页 ', link: '/' },
 
       {
         text: '活动资讯', link: '/pages/02b615/', items: [
