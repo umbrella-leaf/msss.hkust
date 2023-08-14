@@ -25,7 +25,7 @@ module.exports = {
       {
         text: '活动资讯', link: '/pages/02b615/', items: [
           { text: '活动信息', link: '/pages/02b615/' },
-          { text: '往期活动', link: '/pages/921247/' },
+   
         ]
       },
 
@@ -36,9 +36,9 @@ module.exports = {
         ]
       },
       {
-        text: '友情链接', link: '/pages/04b3bb/', items: [
-          { text: '科大相关网站', link: '/pages/04b3bb/' },
-
+        text: '友情链接', link: '/pages/34c580/', items: [
+          { text: '科大相关网站', link: '/pages/34c580/' },
+          { text: '相关相关网站', link: '/pages/335da8/' },
         ]
       },
       {
@@ -96,6 +96,21 @@ module.exports = {
           iconClass: 'icon-youjian',
           title: '发邮件',
           link: 'mailto:msss@ust.hk'
+        },
+        {
+          iconClass: 'icon-weixin',
+          title: '微信公众号',
+          link: '/pages/d310b3/'
+        },
+        {
+          iconClass: 'icon-bilibili',
+          title: '哔哩哔哩',
+          link: 'https://space.bilibili.com/296540499'
+        },
+        {
+          iconClass: 'icon-weibo',
+          title: '微博',
+          link: 'https://weibo.com/hkustmsss'
         },
       ]
     },
