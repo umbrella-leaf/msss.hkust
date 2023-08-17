@@ -38,9 +38,9 @@ module.exports = {
       {
         text: '友情链接', link: '/pages/34c580/', items: [
           { text: '科大相关网站', link: '/pages/34c580/' },
-          { text: '香港相关网站', link: '/pages/335da8/' },
+          { text: '香港友好社团', link: '/pages/335da8/' },
           { text: '科大俱乐部', link: '/pages/bc0855/' },
-
+       
         ]
       },
       {
