@@ -131,15 +131,22 @@ module.exports = {
     // }],
 
     ['fulltext-search'], // 全文搜索
-
-    ['thirdparty-search', { // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
-      thirdparty: [ // 可选，默认 []
-        {
-          title: '在Bing中搜索',
-          frontUrl: 'https://cn.bing.com/search?q='
-        }
-      ]
-    }],
+    // [
+    //   'fulltext-search',
+    //   {
+    //     tokenize: 'full',
+    //     split: /\s+/,
+    //     encode: 'icase',
+    //   },
+    // ],
+    // ['thirdparty-search', { // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
+    //   thirdparty: [ // 可选，默认 []
+    //     {
+    //       title: '在Bing中搜索',
+    //       frontUrl: 'https://cn.bing.com/search?q='
+    //     }
+    //   ]
+    // }],
 
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
