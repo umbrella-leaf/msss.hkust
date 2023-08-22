@@ -69,6 +69,8 @@ data:
 
 <br>
 
+<hr>
+
 ::: center
 
 # ⛵科大站点地图 
@@ -82,17 +84,17 @@ data:
 ```yaml
 
 - name: 生活
-  desc: 科大·生活
+  desc: 场地与设施服务时间查询&场地与设施预定
   link: /pages/34c580/#科大·生活
   bgColor: '#e7c000'
   textColor: '#ffffff'
 - name: 学术
-  desc: 科大·学术
+  desc: 图书馆&&资讯科技服务中心&&课业
   link: /pages/34c580/#科大·学术
   bgColor: '#42b983'
   textColor: '#ffffff'
 - name: 组织架构
-  desc: 科大·组织架构
+  desc: 行政部门&&学术部门
   link: /pages/34c580/#科大·组织架构
   bgColor: '#157bad'
   textColor: '#ffffff'
@@ -108,13 +110,15 @@ data:
 
 <br>
 
+<hr>
+
 ::: center
 
 <h1>💪🏻关于MSSS</h1>
 
-### MSSS是香港科技大学规模最大、历史最悠久的内地学生社团。
+<h3>MSSS是香港科技大学规模最大、历史最悠久的内地学生社团。</h3>
 
-### 我们的宗旨是
+<h3>我们的宗旨是</h3>
 
 <h3  >欢聚科大，探索香港，交流学术，规划生涯。</h3>
 
@@ -128,3 +132,13 @@ data:
 更多内容在[关于我们](/pages/912720/)
 :::
 
+
+
+<style>
+    .card-item{
+        height:150px;
+        font-size:30px;
+    }
+</style>
+
+ 
