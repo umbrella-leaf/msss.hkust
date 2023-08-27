@@ -139,6 +139,9 @@ data:
         height:150px;
         font-size:30px;
     }
+    .banner {
+        min-height: 30vw !important;
+    }
 </style>
 
  
