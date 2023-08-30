@@ -9,7 +9,7 @@ module.exports = {
 
   title: 'MSSS - 香港科技大学内地学生学者联谊会',
   description: 'MSSS - 香港科技大学',
-  base:'/msss.hkust/',
+  base:'/',
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     ['link', { rel: 'icon', href: '/img/logo.jpg' }], //favicons，资源放在public文件夹
@@ -25,7 +25,7 @@ module.exports = {
       {
         text: '活动资讯', link: '/pages/02b615/', items: [
           { text: '活动信息', link: '/pages/02b615/' },
-   
+
         ]
       },
 
@@ -40,7 +40,7 @@ module.exports = {
           { text: '科大相关网站', link: '/pages/34c580/' },
           { text: '香港友好社团', link: '/pages/335da8/' },
           { text: '科大俱乐部', link: '/pages/bc0855/' },
-       
+
         ]
       },
       {
