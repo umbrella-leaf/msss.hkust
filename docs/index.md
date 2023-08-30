@@ -20,37 +20,37 @@ config:
 
 data:
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略1.4hh1ar1dto80.webp
-    link: /pages/4b73b3/
+    link: '/pages/4b73b3/'
     name: 1.通关相关
     desc: 内地来香港, 海外来香港,香港防疫资讯,港回内地
     author: MSSS
     avatar: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/logo.42vc4fmywu00.webp
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略2.659upkf8b800.webp
-    link: /pages/e74b65/
+    link: '/pages/e74b65/'
     name: 2.行前准备
     desc: 学生签证, 寄送材料, 行前准备, 租房及宿舍, 其他事项
     author: MSSS
     avatar: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/logo.42vc4fmywu00.webp
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略3.2xbyp8spz2m0.webp
-    link: /pages/9cf1d5/
+    link: '/pages/9cf1d5/'
     name: 3. 学术相关
     desc: 注册选课，资源及软件，RPG相关，毕业时间详解和科大文件办理
     author: MSSS
     avatar: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/logo.42vc4fmywu00.webp
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略4.3r3n9ej8g840.webp
-    link: /pages/cc91c2/
+    link: '/pages/cc91c2/'
     name: 4.生活在科大
     desc: 科大常用术语, 科大架构部门, 运动娱乐设施, 科大常用网站, 科大常见问题
     author: MSSS
     avatar: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/logo.42vc4fmywu00.webp
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略5.54ek3jbp67k0.webp
-    link: /pages/a7ff78/
+    link: '/pages/a7ff78/'
     name: 5.生活在香港
     desc: 香港常用术语, 购物及转运, 日常生活, 香港证件办理,香港常见问题
     author: MSSS
     avatar: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/logo.42vc4fmywu00.webp
   - img: https://cdn.staticaly.com/gh/jerry01777/picx-images-hosting@master/20230811/全攻略6.4thoq8dcn6k0.webp
-    link: /pages/d2c67e/
+    link: '/pages/d2c67e/'
     name: 6.MSSS相关
     desc: MSSS介绍, MSSS活动, MSSS微信群, MSSS俱乐部, MSSS平台
     author: MSSS
@@ -85,17 +85,17 @@ data:
 
 - name: 生活
   desc: 场地与设施服务时间查询&场地与设施预定
-  link: /pages/34c580/#科大·生活
+  link: '/pages/34c580/#科大·生活'
   bgColor: '#e7c000'
   textColor: '#ffffff'
 - name: 学术
   desc: 图书馆&&资讯科技服务中心&&课业
-  link: /pages/34c580/#科大·学术
+  link: '/pages/34c580/#科大·学术'
   bgColor: '#42b983'
   textColor: '#ffffff'
 - name: 组织架构
   desc: 行政部门&&学术部门
-  link: /pages/34c580/#科大·组织架构
+  link: '/pages/34c580/#科大·组织架构'
   bgColor: '#157bad'
   textColor: '#ffffff'
 ```
